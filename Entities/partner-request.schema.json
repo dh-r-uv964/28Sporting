@@ -1,0 +1,62 @@
+{
+  "name": "PartnerRequest",
+  "type": "object",
+  "properties": {
+    "requester_email": {
+      "type": "string",
+      "description": "Email of user looking for partner"
+    },
+    "sport": {
+      "type": "string",
+      "enum": [
+        "golf",
+        "tennis",
+        "paddle",
+        "pickleball"
+      ],
+      "description": "Sport to play"
+    },
+    "venue_id": {
+      "type": "string",
+      "description": "ID of the venue"
+    },
+    "preferred_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Preferred play date"
+    },
+    "preferred_time": {
+      "type": "string",
+      "description": "Preferred time"
+    },
+    "skill_level": {
+      "type": "string",
+      "enum": [
+        "beginner",
+        "intermediate",
+        "advanced",
+        "expert"
+      ],
+      "description": "Skill level"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "open",
+        "matched",
+        "completed",
+        "cancelled"
+      ],
+      "default": "open",
+      "description": "Request status"
+    },
+    "matched_with_email": {
+      "type": "string",
+      "description": "Email of matched partner"
+    }
+  },
+ 

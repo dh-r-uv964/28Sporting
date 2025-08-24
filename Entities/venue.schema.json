@@ -1,0 +1,64 @@
+{
+  "name": "Venue",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the venue"
+    },
+    "sport_type": {
+      "type": "string",
+      "enum": [
+        "golf",
+        "tennis",
+        "paddle",
+        "pickleball"
+      ],
+      "description": "Type of sport"
+    },
+    "venue_type": {
+      "type": "string",
+      "enum": [
+        "public",
+        "private",
+        "simulator",
+        "gym"
+      ],
+      "description": "Type of venue"
+    },
+    "location": {
+      "type": "string",
+      "description": "Venue location"
+    },
+    "address": {
+      "type": "string",
+      "description": "Full address"
+    },
+    "rating": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 5,
+      "description": "Google reviews rating"
+    },
+    "review_count": {
+      "type": "integer",
+      "description": "Number of reviews"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Contact phone"
+    },
+    "website": {
+      "type": "string",
+      "description": "Website URL"
+    },
+    "amenities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Available amenities"
+    }
+  },
+  "required": ["name", "sport_type", "venue_type", "location", "address"]
+}
